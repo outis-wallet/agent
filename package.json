@@ -1,0 +1,18 @@
+{
+  "name": "outis-agent",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "build:wasm": "pnpm --filter @outis-wallet/typed-data build",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "cargo test --manifest-path crates/typed-data/Cargo.toml && pnpm -r test"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "8.3.1"
+    }
+  }
+}

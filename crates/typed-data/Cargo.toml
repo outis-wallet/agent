@@ -1,0 +1,37 @@
+[package]
+name = "outis-typed-data"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/outis-wallet/agent"
+description = "SNIP-12 typed data hashing (revisions 0 and 1) exactly as starknet.js reads it, refusing what it would read another way: the hashing Outis signs with."
+publish = false
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[features]
+# The wasm-bindgen exports (src/wasm.rs) for @outis-wallet/typed-data. Off by default: a crate that
+# builds its own wasm with this one inside (Outis's wallet core) exports its own functions instead.
+wasm = ["dep:wasm-bindgen"]
+
+[dependencies]
+num-bigint = "0.4"
+num-traits = "0.2"
+serde_json = { version = "1", features = ["float_roundtrip"] }
+sha3 = "0.10"
+starknet-crypto = "0.8"
+wasm-bindgen = { version = "0.2.126", optional = true }
+
+# getrandom's browser backend is for the curve library's, which this crate never calls.
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+getrandom = { version = "0.2", features = ["js"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+
+# The browser build (packages/typed-data/scripts/build-wasm.sh): wasm-opt with the features rustc's
+# wasm32 target emits by default, which wasm-pack's own wasm-opt doesn't enable on its own.
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ["-O", "--enable-bulk-memory", "--enable-nontrapping-float-to-int", "--enable-reference-types", "--enable-multivalue", "--enable-sign-ext", "--enable-mutable-globals"]

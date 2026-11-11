@@ -1,0 +1,3587 @@
+{
+  "typed_data": [
+    {
+      "name": "outside execution, revision 1",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "OutsideExecution": [
+            {
+              "name": "Caller",
+              "type": "ContractAddress"
+            },
+            {
+              "name": "Nonce",
+              "type": "felt"
+            },
+            {
+              "name": "Execute After",
+              "type": "u128"
+            },
+            {
+              "name": "Execute Before",
+              "type": "u128"
+            },
+            {
+              "name": "Calls",
+              "type": "Call*"
+            }
+          ],
+          "Call": [
+            {
+              "name": "To",
+              "type": "ContractAddress"
+            },
+            {
+              "name": "Selector",
+              "type": "selector"
+            },
+            {
+              "name": "Calldata",
+              "type": "felt*"
+            }
+          ]
+        },
+        "primaryType": "OutsideExecution",
+        "domain": {
+          "name": "Account.execute_from_outside",
+          "version": "2",
+          "chainId": "0x534e5f4d41494e",
+          "revision": "1"
+        },
+        "message": {
+          "Caller": "0x414e595f43414c4c4552",
+          "Nonce": "0x1234",
+          "Execute After": 1,
+          "Execute Before": 1900000000,
+          "Calls": [
+            {
+              "To": "0x4718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d",
+              "Selector": "0x83afd3f4caedc6eebf44246fe54e38c95e3179a5ec9ea81740eca5b482d12e",
+              "Calldata": [
+                "0x5eed",
+                "0xde0b6b3a7640000",
+                "0x0"
+              ]
+            }
+          ]
+        }
+      },
+      "hash": "0x1b430cd461943c87731c9f4249f10edba8128c93b6b017b735494fc63ce35cb",
+      "revision": "1",
+      "domain_hash": "0x9951e1d5316915dc4436acce0a48afd57bb4b6c501687c151e869ab878a2ac",
+      "type_hash": "0x312b56c05a7965066ddbda31c016d8d05afc305071c0ca3cdc2192c3c2f1f0f",
+      "fields": [
+        "0x312b56c05a7965066ddbda31c016d8d05afc305071c0ca3cdc2192c3c2f1f0f",
+        "0x414e595f43414c4c4552",
+        "0x1234",
+        "0x1",
+        "0x713fb300",
+        "0x476a202fceff925b9be1e127b9bb119688f660cf4074c0aaa76b8975f981a80"
+      ]
+    },
+    {
+      "name": "outside execution, revision 0",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarkNetDomain": [
+            {
+              "name": "name",
+              "type": "felt"
+            },
+            {
+              "name": "version",
+              "type": "felt"
+            },
+            {
+              "name": "chainId",
+              "type": "felt"
+            }
+          ],
+          "OutsideExecution": [
+            {
+              "name": "caller",
+              "type": "felt"
+            },
+            {
+              "name": "nonce",
+              "type": "felt"
+            },
+            {
+              "name": "execute_after",
+              "type": "felt"
+            },
+            {
+              "name": "execute_before",
+              "type": "felt"
+            },
+            {
+              "name": "calls_len",
+              "type": "felt"
+            },
+            {
+              "name": "calls",
+              "type": "OutsideCall*"
+            }
+          ],
+          "OutsideCall": [
+            {
+              "name": "to",
+              "type": "felt"
+            },
+            {
+              "name": "selector",
+              "type": "felt"
+            },
+            {
+              "name": "calldata_len",
+              "type": "felt"
+            },
+            {
+              "name": "calldata",
+              "type": "felt*"
+            }
+          ]
+        },
+        "primaryType": "OutsideExecution",
+        "domain": {
+          "name": "Account.execute_from_outside",
+          "version": "1",
+          "chainId": "0x534e5f5345504f4c4941"
+        },
+        "message": {
+          "caller": "0x1",
+          "execute_after": 0,
+          "execute_before": 99,
+          "nonce": 7,
+          "calls_len": 1,
+          "calls": [
+            {
+              "to": "0x123",
+              "selector": "0x219209e083275171774dab1df80982e9df2096516f06319c5c6d71ae0a8480c",
+              "calldata": [
+                "0x1",
+                "0x2",
+                "0x0"
+              ],
+              "calldata_len": 3
+            }
+          ]
+        }
+      },
+      "hash": "0xb6f067c7e0a353a8cee883cb2bffde01989b15d8739f6272b273415bd7175e",
+      "revision": "0",
+      "domain_hash": "0x7bd25b32628c39ed959c604984e7eacae73396f69646548696249f8a118ffca",
+      "type_hash": "0x11ff76fe3f640fa6f3d60bbd94a3b9d47141a2c96f87fdcfbeb2af1d03f7050",
+      "fields": [
+        "0x11ff76fe3f640fa6f3d60bbd94a3b9d47141a2c96f87fdcfbeb2af1d03f7050",
+        "0x1",
+        "0x7",
+        "0x0",
+        "0x63",
+        "0x1",
+        "0x2ef61615ea741f6ae93e97509d5cbb9dcf7127f5f4464c5be5250111be3b2fc"
+      ]
+    },
+    {
+      "name": "mail, revision 0",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarkNetDomain": [
+            {
+              "name": "name",
+              "type": "felt"
+            },
+            {
+              "name": "version",
+              "type": "felt"
+            },
+            {
+              "name": "chainId",
+              "type": "felt"
+            }
+          ],
+          "Person": [
+            {
+              "name": "name",
+              "type": "felt"
+            },
+            {
+              "name": "wallet",
+              "type": "felt"
+            }
+          ],
+          "Mail": [
+            {
+              "name": "from",
+              "type": "Person"
+            },
+            {
+              "name": "to",
+              "type": "Person"
+            },
+            {
+              "name": "contents",
+              "type": "felt"
+            },
+            {
+              "name": "tags",
+              "type": "felt*"
+            }
+          ]
+        },
+        "primaryType": "Mail",
+        "domain": {
+          "name": "StarkNet Mail",
+          "version": "1",
+          "chainId": 1
+        },
+        "message": {
+          "from": {
+            "name": "Cow",
+            "wallet": "0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826"
+          },
+          "to": {
+            "name": "Bob",
+            "wallet": "0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB"
+          },
+          "contents": "Hello, Bob!",
+          "tags": [
+            "a",
+            "b",
+            "0x10"
+          ]
+        }
+      },
+      "hash": "0x6a0e85ed71661cc20a2309d4ff9e854af5afc7644d2dee1fc6ba0f8116f9b20",
+      "revision": "0",
+      "domain_hash": "0x54833b121883a3e3aebff48ec08a962f5742e5f7b973469c1f8f4f55d470b07",
+      "type_hash": "0x2f31d5979b9eb1b275f5afacd3fa605401b5ceee591b353c1c7a385c6ee0cb3",
+      "fields": [
+        "0x2f31d5979b9eb1b275f5afacd3fa605401b5ceee591b353c1c7a385c6ee0cb3",
+        "0x2c7ba1cb8c06977acdb53fa02c69cf25f14efb05a90244e9ad5dbab021de97a",
+        "0x241b8ab480e3e882d4a541b9348c1675f5ea8879930bc426262a7149d661207",
+        "0x48656c6c6f2c20426f6221",
+        "0x2c13439d02e95c6546963e6b81af577d12db1ee2bfa2d68fe8067d6175056fa"
+      ]
+    },
+    {
+      "name": "merkle tree, revision 0",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarkNetDomain": [
+            {
+              "name": "name",
+              "type": "felt"
+            },
+            {
+              "name": "version",
+              "type": "felt"
+            },
+            {
+              "name": "chainId",
+              "type": "felt"
+            }
+          ],
+          "Session": [
+            {
+              "name": "key",
+              "type": "felt"
+            },
+            {
+              "name": "expires",
+              "type": "felt"
+            },
+            {
+              "name": "root",
+              "type": "merkletree",
+              "contains": "Policy"
+            }
+          ],
+          "Policy": [
+            {
+              "name": "contractAddress",
+              "type": "felt"
+            },
+            {
+              "name": "selector",
+              "type": "selector"
+            }
+          ]
+        },
+        "primaryType": "Session",
+        "domain": {
+          "name": "StarkNet Mail",
+          "version": "1",
+          "chainId": 1
+        },
+        "message": {
+          "key": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "expires": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "root": [
+            {
+              "contractAddress": "0x1",
+              "selector": "transfer"
+            },
+            {
+              "contractAddress": "0x2",
+              "selector": "transfer"
+            },
+            {
+              "contractAddress": "0x3",
+              "selector": "transfer"
+            }
+          ]
+        }
+      },
+      "hash": "0x2872076a21da5aefcbb72d279b9f9324e3689f505d49bbc9d5c8ee39872b807",
+      "revision": "0",
+      "domain_hash": "0x54833b121883a3e3aebff48ec08a962f5742e5f7b973469c1f8f4f55d470b07",
+      "type_hash": "0x1aa0e1c56b45cf06a54534fa1707c54e520b842feb21d03b7deddb6f1e340c",
+      "fields": [
+        "0x1aa0e1c56b45cf06a54534fa1707c54e520b842feb21d03b7deddb6f1e340c",
+        "0x0",
+        "0x0",
+        "0x12354b159e3799dc0ebe86d62dde4ce7b300538d471e5a7fef23dcbac076011"
+      ]
+    },
+    {
+      "name": "every type, revision 1",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Example": [
+            {
+              "name": "n0",
+              "type": "felt"
+            },
+            {
+              "name": "n1",
+              "type": "bool"
+            },
+            {
+              "name": "n2",
+              "type": "string"
+            },
+            {
+              "name": "n3",
+              "type": "selector"
+            },
+            {
+              "name": "n4",
+              "type": "u128"
+            },
+            {
+              "name": "n5",
+              "type": "i128"
+            },
+            {
+              "name": "n6",
+              "type": "ContractAddress"
+            },
+            {
+              "name": "n7",
+              "type": "ClassHash"
+            },
+            {
+              "name": "n8",
+              "type": "timestamp"
+            },
+            {
+              "name": "n9",
+              "type": "shortstring"
+            },
+            {
+              "name": "n10",
+              "type": "merkletree",
+              "contains": "Leaf"
+            },
+            {
+              "name": "n11",
+              "type": "enum",
+              "contains": "Choice"
+            },
+            {
+              "name": "n12",
+              "type": "u256"
+            },
+            {
+              "name": "n13",
+              "type": "TokenAmount"
+            },
+            {
+              "name": "n14",
+              "type": "NftId"
+            },
+            {
+              "name": "n15",
+              "type": "Leaf*"
+            },
+            {
+              "name": "n16",
+              "type": "enum",
+              "contains": "Choice"
+            }
+          ],
+          "Leaf": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ],
+          "Choice": [
+            {
+              "name": "Nothing",
+              "type": "()"
+            },
+            {
+              "name": "Pair",
+              "type": "(felt,u128)"
+            },
+            {
+              "name": "Many",
+              "type": "(Leaf*,string)"
+            }
+          ]
+        },
+        "primaryType": "Example",
+        "domain": {
+          "name": "Outis vectors",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": "1"
+        },
+        "message": {
+          "n0": "0x3e8",
+          "n1": true,
+          "n2": "a string longer than thirty-one characters, so two words and a pending one",
+          "n3": "transfer",
+          "n4": "340282366920938463463374607431768211455",
+          "n5": "-170141183460469231731687303715884105728",
+          "n6": "0x0123",
+          "n7": "0x456",
+          "n8": 1900000000,
+          "n9": "short words",
+          "n10": [
+            {
+              "value": "0x1"
+            },
+            {
+              "value": "0x2"
+            },
+            {
+              "value": "0x3"
+            },
+            {
+              "value": "0x4"
+            },
+            {
+              "value": "0x5"
+            }
+          ],
+          "n11": {
+            "Many": [
+              [
+                {
+                  "value": "0x7"
+                }
+              ],
+              "inside an enum"
+            ]
+          },
+          "n12": {
+            "low": "0x1",
+            "high": "0x2"
+          },
+          "n13": {
+            "token_address": "0x4718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d",
+            "amount": {
+              "low": "1000",
+              "high": "0"
+            }
+          },
+          "n14": {
+            "collection_address": "0x99",
+            "token_id": {
+              "low": "0x5",
+              "high": "0x0"
+            }
+          },
+          "n15": [
+            {
+              "value": "0xa"
+            },
+            {
+              "value": "0xb"
+            }
+          ],
+          "n16": {
+            "Nothing": []
+          }
+        }
+      },
+      "hash": "0x37a3ded16ff18f5aceaf914bda6884c39bdb67d0b281384c0284cb4f283b392",
+      "revision": "1",
+      "domain_hash": "0xd30659bc2d9ad8a48aa5e48bd47f9022132c394c6eaa1afb6e19e2d8bfac49",
+      "type_hash": "0x786b0d6be72edf9e710f6553e5eacdbe195a7b9138165a410b5b0af9fa72d8",
+      "fields": [
+        "0x786b0d6be72edf9e710f6553e5eacdbe195a7b9138165a410b5b0af9fa72d8",
+        "0x3e8",
+        "0x1",
+        "0x3f9b5a50e33ce981b3ddc89220498249d26ec43b4176dd5650526ee015ba651",
+        "0x83afd3f4caedc6eebf44246fe54e38c95e3179a5ec9ea81740eca5b482d12e",
+        "0xffffffffffffffffffffffffffffffff",
+        "0x800000000000010ffffffffffffffff80000000000000000000000000000001",
+        "0x123",
+        "0x456",
+        "0x713fb300",
+        "0x73686f727420776f726473",
+        "0x74b21f4200b53036a0db44bb8d78305238dd06cd323d2c9ed60013adbc93541",
+        "0x1a6f415daa4160d8b2d9796069d32aa036ba10dde530cb79dfb77fb63092723",
+        "0x3612951f550b45895a49f6e70755870bcaba8c0dce0aed1f9880b8cc66ad129",
+        "0x72b6039e7960e263a5a3708992399c5947609dcf04f8bc0b38c90b02fcd5f1c",
+        "0x52de57edc4a4cd3cfcf44535712175cbe5ebb48e6a08a45a8f43c757ab6b3c",
+        "0x1cd13f93cd62290c09b3111fcf8c6cbc640ced82bca4243b567434f884bfd41",
+        "0x1fb7169b936dd880cb7ebc50e932a495a60e0084cdab94a681040cb4006e1a0"
+      ]
+    },
+    {
+      "name": "a session's authorization, revision 1",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Session": [
+            {
+              "name": "Expires At",
+              "type": "timestamp"
+            },
+            {
+              "name": "Allowed Methods",
+              "type": "merkletree",
+              "contains": "Allowed Method"
+            },
+            {
+              "name": "Metadata",
+              "type": "string"
+            },
+            {
+              "name": "Session Key",
+              "type": "felt"
+            }
+          ],
+          "Allowed Method": [
+            {
+              "name": "Contract Address",
+              "type": "ContractAddress"
+            },
+            {
+              "name": "selector",
+              "type": "selector"
+            }
+          ]
+        },
+        "primaryType": "Session",
+        "domain": {
+          "name": "SessionAccount.session",
+          "version": "0x31",
+          "chainId": "SN_SEPOLIA",
+          "revision": "1"
+        },
+        "message": {
+          "Expires At": 1800000000,
+          "Allowed Methods": [
+            {
+              "Contract Address": "0x1234",
+              "selector": "increase_counter"
+            }
+          ],
+          "Metadata": "{\"projectID\":\"outis\",\"maxFee\":0}",
+          "Session Key": "0x7777"
+        }
+      },
+      "hash": "0x67e1ee1b3df91dce966c205fdc9f937a0c2ee0c5c1e61c45db51bd7a9027170",
+      "revision": "1",
+      "domain_hash": "0x15ec5555a0bf3e04a641dd3e2d8b14748fd4acfc9d90dbc851268931355a7bf",
+      "type_hash": "0x2a7d1ecdf754b100d735189f4969485656c828bfcb863a154c61199caa02434",
+      "fields": [
+        "0x2a7d1ecdf754b100d735189f4969485656c828bfcb863a154c61199caa02434",
+        "0x6b49d200",
+        "0x212bbaa74ab3cf2dba7a7a6014ac8c9985a04aebb6ed2cd523393f2adad6c67",
+        "0x32b22f5a658c691af2c44ec402b4b4f4da188e1fca4666aa690dbd2d99cde9e",
+        "0x7777"
+      ]
+    },
+    {
+      "name": "a numeric string is a number",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "shortstring"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "123"
+        }
+      },
+      "hash": "0x416e7e39ce45465418feb95ca4678d5d563e5674c467c2fa38508f7c9d75ded",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x16ed5fd0a61b76e79afb867be4440c3d36f9c649df26fed44daaea0da627d2e",
+      "fields": [
+        "0x16ed5fd0a61b76e79afb867be4440c3d36f9c649df26fed44daaea0da627d2e",
+        "0x7b"
+      ]
+    },
+    {
+      "name": "a hex string is a number",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "0xabc"
+        }
+      },
+      "hash": "0x704a89a8d632e018b7d56355e7745be6230d2ddeb62b3b46e2bb689985e60a0",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+      "fields": [
+        "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+        "0xabc"
+      ]
+    },
+    {
+      "name": "an empty string is 0",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": ""
+        }
+      },
+      "hash": "0x47ad381727d694331a99a76233de2563156b14495d442ce99dae6b6be800700",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+      "fields": [
+        "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+        "0x0"
+      ]
+    },
+    {
+      "name": "0x alone is a short string",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "shortstring"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "0x"
+        }
+      },
+      "hash": "0x1cac141ebd5871eb21e3b771e23952c5a5eb1eb4bff9d3948160b847c8ea25a",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x16ed5fd0a61b76e79afb867be4440c3d36f9c649df26fed44daaea0da627d2e",
+      "fields": [
+        "0x16ed5fd0a61b76e79afb867be4440c3d36f9c649df26fed44daaea0da627d2e",
+        "0x3078"
+      ]
+    },
+    {
+      "name": "a signed decimal",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "+42"
+        }
+      },
+      "hash": "0x40e6e642e54bb40b5f7f1d9be1dd1a33eec6e9e247792441395c31193c9ac3",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+      "fields": [
+        "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+        "0x2a"
+      ]
+    },
+    {
+      "name": "a JSON number",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "u128"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": 77
+        }
+      },
+      "hash": "0x6a61284741fc5d4f9f8b73c721ff0a81279309b63ad3a296c84f4e89da611ed",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x33a9200aff532111c1b5a761d30dc66b597c2724f6e0c3682ea2777d53bfd19",
+      "fields": [
+        "0x33a9200aff532111c1b5a761d30dc66b597c2724f6e0c3682ea2777d53bfd19",
+        "0x4d"
+      ]
+    },
+    {
+      "name": "a bool as a felt",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarkNetDomain": [
+            {
+              "name": "name",
+              "type": "felt"
+            },
+            {
+              "name": "version",
+              "type": "felt"
+            },
+            {
+              "name": "chainId",
+              "type": "felt"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": 1,
+          "chainId": "SN_SEPOLIA"
+        },
+        "message": {
+          "value": true
+        }
+      },
+      "hash": "0x62845d046cc2d96289e509280b0a6b9619190afac641ef8867b3e94acfdabbb",
+      "revision": "0",
+      "domain_hash": "0x2f79efbe8f84850befd000dbddc004b532750362faebd017788e4e23f79fa2f",
+      "type_hash": "0x2fbfea20e5a55faf1cd47059adf78294d37f4f3190fb3221b9d6878b2ae37c2",
+      "fields": [
+        "0x2fbfea20e5a55faf1cd47059adf78294d37f4f3190fb3221b9d6878b2ae37c2",
+        "0x1"
+      ]
+    },
+    {
+      "name": "an octal string",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "0o17"
+        }
+      },
+      "hash": "0x45e3beae95640b1d6ff01682ce69568faf7f345f16d6bda6b7800a830bd8bf2",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+      "fields": [
+        "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+        "0xf"
+      ]
+    },
+    {
+      "name": "a binary string",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "u128"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "0b101"
+        }
+      },
+      "hash": "0x500202d4ec899cc3d6c8ede17dd3c933800036badefe18e0ebf87a362e91fe1",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x33a9200aff532111c1b5a761d30dc66b597c2724f6e0c3682ea2777d53bfd19",
+      "fields": [
+        "0x33a9200aff532111c1b5a761d30dc66b597c2724f6e0c3682ea2777d53bfd19",
+        "0x5"
+      ]
+    },
+    {
+      "name": "a one-leaf merkle tree is its leaf",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "merkletree",
+              "contains": "Leaf"
+            }
+          ],
+          "Leaf": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": [
+            {
+              "value": "0x5"
+            }
+          ]
+        }
+      },
+      "hash": "0x19eb9cc7988773488a23c432e7b5f71593ad9c9b79088b2a077b4c4e8f13cd0",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1eb516a41bba59a9d7bf9c497b332083f33fad809270666b46aa8e88339c65d",
+      "fields": [
+        "0x1eb516a41bba59a9d7bf9c497b332083f33fad809270666b46aa8e88339c65d",
+        "0x125bb27398fc7bef4705e68be0368cf0efb052d7852d6e804b1e8df35579071"
+      ]
+    },
+    {
+      "name": "a two-leaf merkle tree",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "merkletree",
+              "contains": "Leaf"
+            }
+          ],
+          "Leaf": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": [
+            {
+              "value": "0x9"
+            },
+            {
+              "value": "0x5"
+            }
+          ]
+        }
+      },
+      "hash": "0x4fdd544e098ef77903081d3518ec762838d8ec7d872345342d8b287503f2578",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1eb516a41bba59a9d7bf9c497b332083f33fad809270666b46aa8e88339c65d",
+      "fields": [
+        "0x1eb516a41bba59a9d7bf9c497b332083f33fad809270666b46aa8e88339c65d",
+        "0x67a1c6fe49e8b7e31272f05f492e277616fcc1b7cf61268080861aec003bc55"
+      ]
+    },
+    {
+      "name": "a unit variant",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "enum",
+              "contains": "Choice"
+            }
+          ],
+          "Choice": [
+            {
+              "name": "None",
+              "type": "()"
+            },
+            {
+              "name": "Some",
+              "type": "(felt)"
+            },
+            {
+              "name": "Two",
+              "type": "(felt,)"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": {
+            "None": []
+          }
+        }
+      },
+      "hash": "0x49a66e4c0d59cc5711452d785d3a6e9b5078796e7d1e4981e9747d950b8e6b8",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x17b6656c4236d673c01ceb244ec7f86b671310d3398b7752bb8d737ca550803",
+      "fields": [
+        "0x17b6656c4236d673c01ceb244ec7f86b671310d3398b7752bb8d737ca550803",
+        "0x1fb7169b936dd880cb7ebc50e932a495a60e0084cdab94a681040cb4006e1a0"
+      ]
+    },
+    {
+      "name": "a variant with a trailing empty field",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "enum",
+              "contains": "Choice"
+            }
+          ],
+          "Choice": [
+            {
+              "name": "None",
+              "type": "()"
+            },
+            {
+              "name": "Some",
+              "type": "(felt)"
+            },
+            {
+              "name": "Two",
+              "type": "(felt,)"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": {
+            "Two": [
+              "0x3"
+            ]
+          }
+        }
+      },
+      "hash": "0x73a850aac0af5c11622749f1e0f7a289ca070c04aee5287a336926b46a2efeb",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x17b6656c4236d673c01ceb244ec7f86b671310d3398b7752bb8d737ca550803",
+      "fields": [
+        "0x17b6656c4236d673c01ceb244ec7f86b671310d3398b7752bb8d737ca550803",
+        "0x613cab9b87e01d0a8fe4bdc97ffd61e8d8638db861127b03e9476475a892776"
+      ]
+    },
+    {
+      "name": "a variant with a field",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "enum",
+              "contains": "Choice"
+            }
+          ],
+          "Choice": [
+            {
+              "name": "None",
+              "type": "()"
+            },
+            {
+              "name": "Some",
+              "type": "(felt)"
+            },
+            {
+              "name": "Two",
+              "type": "(felt,)"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": {
+            "Some": [
+              "0x3"
+            ]
+          }
+        }
+      },
+      "hash": "0x6738a978852c634184ffac809a21f60a6926da9d2b1abe05b89c01ebe1c3915",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x17b6656c4236d673c01ceb244ec7f86b671310d3398b7752bb8d737ca550803",
+      "fields": [
+        "0x17b6656c4236d673c01ceb244ec7f86b671310d3398b7752bb8d737ca550803",
+        "0x306d0231b41f3ab3d4925eab31f8dbbb41e019d1ece7499781666361a0c71fd"
+      ]
+    },
+    {
+      "name": "a string of exactly 31 characters",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "abcdefghijklmnopqrstuvwxyz01234"
+        }
+      },
+      "hash": "0x4965a629c6cb599ad782f31f11c4dfad20e253425bb96a46ced30cf06ffc2b1",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x33ec678c3aac50c87b3983fb514834234cdde21a356e39380d430ac7843d39",
+      "fields": [
+        "0x33ec678c3aac50c87b3983fb514834234cdde21a356e39380d430ac7843d39",
+        "0x40a4f48f127dd16845809a04718f18fc9962387c6993b7495c55d6289a0fc25"
+      ]
+    },
+    {
+      "name": "an empty string",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": ""
+        }
+      },
+      "hash": "0x148a199dc9c66fa2e962948d0190b0e805ffdcad118ef2e496687e726ea23f2",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x33ec678c3aac50c87b3983fb514834234cdde21a356e39380d430ac7843d39",
+      "fields": [
+        "0x33ec678c3aac50c87b3983fb514834234cdde21a356e39380d430ac7843d39",
+        "0x29aee7812642221479b7e8af204ceaa5a7b7e113349fc8fb93e6303b477eb4d"
+      ]
+    },
+    {
+      "name": "a positive i128",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "i128"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "5"
+        }
+      },
+      "hash": "0x4f7f0beb2c0f07da38f838f2ffbd5c4555d876f57e24dc1112605bc10739cf1",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x3ce19b8cc4ce136b1f7b2ec6e1525ead3c627a2461a0dcab60fcc80975a01d8",
+      "fields": [
+        "0x3ce19b8cc4ce136b1f7b2ec6e1525ead3c627a2461a0dcab60fcc80975a01d8",
+        "0x5"
+      ]
+    },
+    {
+      "name": "a hex selector",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "selector"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "0x83afd3f4caedc6eebf44246fe54e38c95e3179a5ec9ea81740eca5b482d12e"
+        }
+      },
+      "hash": "0x5d5060acc2898e1feb9b826eb1dfd297a023804432ee7c3c375b869a6f51f90",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x38fc16da13a5c32450a8934770ad2e15e9d630852982427d1b551a57b969f07",
+      "fields": [
+        "0x38fc16da13a5c32450a8934770ad2e15e9d630852982427d1b551a57b969f07",
+        "0x83afd3f4caedc6eebf44246fe54e38c95e3179a5ec9ea81740eca5b482d12e"
+      ]
+    },
+    {
+      "name": "a revision 0 string is a short string",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarkNetDomain": [
+            {
+              "name": "name",
+              "type": "felt"
+            },
+            {
+              "name": "version",
+              "type": "felt"
+            },
+            {
+              "name": "chainId",
+              "type": "felt"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": 1,
+          "chainId": "SN_SEPOLIA"
+        },
+        "message": {
+          "value": "hello"
+        }
+      },
+      "hash": "0x3806fbb53d01ebda58ca1ea4ffb84709f67b440dac4975f7b21c4af7d32851c",
+      "revision": "0",
+      "domain_hash": "0x2f79efbe8f84850befd000dbddc004b532750362faebd017788e4e23f79fa2f",
+      "type_hash": "0x36ee6e5c4e098f5a0467125e5d382713512532649d3ee55acfa6563a5e31c8c",
+      "fields": [
+        "0x36ee6e5c4e098f5a0467125e5d382713512532649d3ee55acfa6563a5e31c8c",
+        "0x68656c6c6f"
+      ]
+    },
+    {
+      "name": "a revision 0 enum is a value",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarkNetDomain": [
+            {
+              "name": "name",
+              "type": "felt"
+            },
+            {
+              "name": "version",
+              "type": "felt"
+            },
+            {
+              "name": "chainId",
+              "type": "felt"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "enum"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": 1,
+          "chainId": "SN_SEPOLIA"
+        },
+        "message": {
+          "value": "0x2"
+        }
+      },
+      "hash": "0x7f30e45e3c6af68c9c120d14bb1141bb6d8c9e4f45f18e93f59a03ed2865e51",
+      "revision": "0",
+      "domain_hash": "0x2f79efbe8f84850befd000dbddc004b532750362faebd017788e4e23f79fa2f",
+      "type_hash": "0x9d2ef1047fd8e0f6d6b336b863226a58bced12bc42f596b8490e343c87a45b",
+      "fields": [
+        "0x9d2ef1047fd8e0f6d6b336b863226a58bced12bc42f596b8490e343c87a45b",
+        "0x2"
+      ]
+    },
+    {
+      "name": "a revision 0 list",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarkNetDomain": [
+            {
+              "name": "name",
+              "type": "felt"
+            },
+            {
+              "name": "version",
+              "type": "felt"
+            },
+            {
+              "name": "chainId",
+              "type": "felt"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt*"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": 1,
+          "chainId": "SN_SEPOLIA"
+        },
+        "message": {
+          "value": [
+            "0x1",
+            "two",
+            3
+          ]
+        }
+      },
+      "hash": "0x3bc0daa93210fdbdb7bf198a46050893e6a6acbd7aa8f804967faf70032a176",
+      "revision": "0",
+      "domain_hash": "0x2f79efbe8f84850befd000dbddc004b532750362faebd017788e4e23f79fa2f",
+      "type_hash": "0x5e2ad246aa9ffa5cde5daee5519ad73f3356f22e2d29344359248fa40c9f6a",
+      "fields": [
+        "0x5e2ad246aa9ffa5cde5daee5519ad73f3356f22e2d29344359248fa40c9f6a",
+        "0xef179ce5a2e7143fc62c526a1e077187646e8b1a25d789f719ccf18f412b90"
+      ]
+    },
+    {
+      "name": "revision 0 domain without a revision",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarkNetDomain": [
+            {
+              "name": "name",
+              "type": "felt"
+            },
+            {
+              "name": "version",
+              "type": "felt"
+            },
+            {
+              "name": "chainId",
+              "type": "felt"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": 1,
+          "chainId": "SN_SEPOLIA"
+        },
+        "message": {
+          "value": "0x1"
+        }
+      },
+      "hash": "0x62845d046cc2d96289e509280b0a6b9619190afac641ef8867b3e94acfdabbb",
+      "revision": "0",
+      "domain_hash": "0x2f79efbe8f84850befd000dbddc004b532750362faebd017788e4e23f79fa2f",
+      "type_hash": "0x2fbfea20e5a55faf1cd47059adf78294d37f4f3190fb3221b9d6878b2ae37c2",
+      "fields": [
+        "0x2fbfea20e5a55faf1cd47059adf78294d37f4f3190fb3221b9d6878b2ae37c2",
+        "0x1"
+      ]
+    },
+    {
+      "name": "a value written as a one-element list",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": [
+            "0x5"
+          ]
+        }
+      },
+      "hash": "0x34c303d9603d3af128e311e72b2b20d4d41b33e0fd9e494996185690fbe4da3",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+      "fields": [
+        "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+        "0x5"
+      ]
+    },
+    {
+      "name": "a value written as a nested one-element list",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "shortstring"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": [
+            [
+              "0x5"
+            ]
+          ]
+        }
+      },
+      "hash": "0x7951b183d956d04828cf38d38f965bd4cb242a72045fe60368d82d03d04ef8f",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x16ed5fd0a61b76e79afb867be4440c3d36f9c649df26fed44daaea0da627d2e",
+      "fields": [
+        "0x16ed5fd0a61b76e79afb867be4440c3d36f9c649df26fed44daaea0da627d2e",
+        "0x5"
+      ]
+    },
+    {
+      "name": "an empty list is 0",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": []
+        }
+      },
+      "hash": "0x47ad381727d694331a99a76233de2563156b14495d442ce99dae6b6be800700",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+      "fields": [
+        "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+        "0x0"
+      ]
+    },
+    {
+      "name": "a list of a number",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "u128"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": [
+            7
+          ]
+        }
+      },
+      "hash": "0x146c8f1c2ccfaaf3914b7fb165e74bc9d3b6dcad9051cfa6ebae8ad763256be",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x33a9200aff532111c1b5a761d30dc66b597c2724f6e0c3682ea2777d53bfd19",
+      "fields": [
+        "0x33a9200aff532111c1b5a761d30dc66b597c2724f6e0c3682ea2777d53bfd19",
+        "0x7"
+      ]
+    },
+    {
+      "name": "a list of a null is 0",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": [
+            null
+          ]
+        }
+      },
+      "hash": "0x47ad381727d694331a99a76233de2563156b14495d442ce99dae6b6be800700",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+      "fields": [
+        "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+        "0x0"
+      ]
+    },
+    {
+      "name": "a number with spaces around it",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": " 0x7B "
+        }
+      },
+      "hash": "0x64a2e2c6203aa561f08cce632cb6772db1f8a0f1ed1c1a6fb754568bcc00671",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+      "fields": [
+        "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+        "0x7b"
+      ]
+    },
+    {
+      "name": "a number with no-break spaces and a tab around it",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "u128"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "\u00a0\t7\u00a0"
+        }
+      },
+      "hash": "0x146c8f1c2ccfaaf3914b7fb165e74bc9d3b6dcad9051cfa6ebae8ad763256be",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x33a9200aff532111c1b5a761d30dc66b597c2724f6e0c3682ea2777d53bfd19",
+      "fields": [
+        "0x33a9200aff532111c1b5a761d30dc66b597c2724f6e0c3682ea2777d53bfd19",
+        "0x7"
+      ]
+    },
+    {
+      "name": "a number with a byte order mark before it",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "\ufeff5"
+        }
+      },
+      "hash": "0x34c303d9603d3af128e311e72b2b20d4d41b33e0fd9e494996185690fbe4da3",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+      "fields": [
+        "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+        "0x5"
+      ]
+    },
+    {
+      "name": "a number with a line feed after it",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "5\n"
+        }
+      },
+      "hash": "0x34c303d9603d3af128e311e72b2b20d4d41b33e0fd9e494996185690fbe4da3",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+      "fields": [
+        "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+        "0x5"
+      ]
+    },
+    {
+      "name": "white space alone is 0",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": " \t "
+        }
+      },
+      "hash": "0x47ad381727d694331a99a76233de2563156b14495d442ce99dae6b6be800700",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+      "fields": [
+        "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+        "0x0"
+      ]
+    },
+    {
+      "name": "text with a control character",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "A\u0005B"
+        }
+      },
+      "hash": "0x47d4eae12ebd41c28bad5d9f78b5a22fe84ea74c029931d235cbd43af38a5c2",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+      "fields": [
+        "0x1929ab940d6aad18a8a92f894ed58f103d1b12e59e0c2280273860a195e7a8f",
+        "0x41542"
+      ]
+    },
+    {
+      "name": "an empty merkle tree",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "merkletree",
+              "contains": "Leaf"
+            }
+          ],
+          "Leaf": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": []
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a u128 too large",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "u128"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "340282366920938463463374607431768211456"
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a felt at the prime",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "0x800000000000011000000000000000000000000000000000000000000000001"
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a short string too long",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "shortstring"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "this short string is longer than thirty-one"
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "an unknown revision 1 type",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "float"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "1"
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a bool that isn't a boolean",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "bool"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "true"
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a negative felt",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "-1"
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "an unknown variant",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "enum",
+              "contains": "Choice"
+            }
+          ],
+          "Choice": [
+            {
+              "name": "None",
+              "type": "()"
+            },
+            {
+              "name": "Some",
+              "type": "(felt)"
+            },
+            {
+              "name": "Two",
+              "type": "(felt,)"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": {
+            "Three": []
+          }
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a type that refers to itself",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "Node"
+            }
+          ],
+          "Node": [
+            {
+              "name": "next",
+              "type": "Node"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": {
+            "next": "0x1"
+          }
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a preset redefined",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ],
+          "u256": [
+            {
+              "name": "low",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "0x1"
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a missing field",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "Leaf"
+            }
+          ],
+          "Leaf": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": {}
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a non-ASCII string",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "caf\u00e9"
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "revision 1 domain type with revision 0",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": "0"
+        },
+        "message": {
+          "value": "0x1"
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a list of two values",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": [
+            "0x1",
+            "0x2"
+          ]
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a list of a boolean",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": [
+            true
+          ]
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a list of a fraction",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": [
+            1.5
+          ]
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a list of an object",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": [
+            {}
+          ]
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "text with a line feed",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "a\nb"
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "text with a carriage return",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarkNetDomain": [
+            {
+              "name": "name",
+              "type": "felt"
+            },
+            {
+              "name": "version",
+              "type": "felt"
+            },
+            {
+              "name": "chainId",
+              "type": "felt"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": 1,
+          "chainId": "SN_SEPOLIA"
+        },
+        "message": {
+          "value": "a\rb"
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "a number with a next line character before it",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": "\u00855"
+        }
+      },
+      "hash": null
+    },
+    {
+      "name": "an outside execution hiding its calls behind decoys, revision 1",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "domain": {
+          "name": "Account.execute_from_outside",
+          "version": "2",
+          "chainId": "0x534e5f4d41494e",
+          "revision": "1"
+        },
+        "primaryType": "OutsideExecution",
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "OutsideExecution": [
+            {
+              "name": "Caller",
+              "type": "ContractAddress"
+            },
+            {
+              "name": "Nonce",
+              "type": "felt"
+            },
+            {
+              "name": "Execute After",
+              "type": "u128"
+            },
+            {
+              "name": "Execute Before",
+              "type": "u128"
+            },
+            {
+              "name": "Calls\":\"Call*\")\"Call\"(\"To\":\"ContractAddress\",\"Selector\":\"selector\",\"Calldata",
+              "type": "felt*"
+            }
+          ]
+        },
+        "message": {
+          "Caller": "0x1",
+          "Nonce": "0x7",
+          "Execute After": 0,
+          "Execute Before": 1900000000,
+          "Calls": [
+            {
+              "To": "0x4718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d",
+              "Selector": "0x83afd3f4caedc6eebf44246fe54e38c95e3179a5ec9ea81740eca5b482d12e",
+              "Calldata": [
+                "0x5eed",
+                "0xde0b6b3a7640000",
+                "0x0"
+              ]
+            }
+          ],
+          "Calls\":\"Call*\")\"Call\"(\"To\":\"ContractAddress\",\"Selector\":\"selector\",\"Calldata": [
+            "0x78bc4d09e244b6d0fa29b311c61f48ecfaa63157b515139d4f8b1b286b9c452"
+          ]
+        }
+      },
+      "hash": "0x7d4346deaa294f7ebaf582e4c4ad04b3a91d69f7b801e1129e4dc4c842341f6",
+      "revision": "1",
+      "domain_hash": "0x9951e1d5316915dc4436acce0a48afd57bb4b6c501687c151e869ab878a2ac",
+      "type_hash": "0x312b56c05a7965066ddbda31c016d8d05afc305071c0ca3cdc2192c3c2f1f0f",
+      "fields": [
+        "0x312b56c05a7965066ddbda31c016d8d05afc305071c0ca3cdc2192c3c2f1f0f",
+        "0x1",
+        "0x7",
+        "0x0",
+        "0x713fb300",
+        "0x3f1905782d00fee1c7f7ef760aec689c84f69c9075673e61c888f9bb1ce3616"
+      ],
+      "refused": true
+    },
+    {
+      "name": "an outside execution hiding its calls behind decoys, revision 0",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "domain": {
+          "name": "Account.execute_from_outside",
+          "version": "1",
+          "chainId": "0x534e5f4d41494e"
+        },
+        "primaryType": "OutsideExecution",
+        "types": {
+          "StarkNetDomain": [
+            {
+              "name": "name",
+              "type": "felt"
+            },
+            {
+              "name": "version",
+              "type": "felt"
+            },
+            {
+              "name": "chainId",
+              "type": "felt"
+            }
+          ],
+          "OutsideExecution": [
+            {
+              "name": "caller",
+              "type": "felt"
+            },
+            {
+              "name": "nonce",
+              "type": "felt"
+            },
+            {
+              "name": "execute_after",
+              "type": "felt"
+            },
+            {
+              "name": "execute_before",
+              "type": "felt"
+            },
+            {
+              "name": "calls_len",
+              "type": "felt"
+            },
+            {
+              "name": "calls:OutsideCall*)OutsideCall(to:felt,selector:felt,calldata_len:felt,calldata",
+              "type": "felt*"
+            }
+          ]
+        },
+        "message": {
+          "caller": "0x1",
+          "execute_after": 0,
+          "execute_before": 1900000000,
+          "nonce": "0x7",
+          "calls_len": 1,
+          "calls": [
+            {
+              "to": "0x4718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d",
+              "selector": "0x83afd3f4caedc6eebf44246fe54e38c95e3179a5ec9ea81740eca5b482d12e",
+              "calldata": [
+                "0x5eed",
+                "0xde0b6b3a7640000",
+                "0x0"
+              ],
+              "calldata_len": 3
+            }
+          ],
+          "calls:OutsideCall*)OutsideCall(to:felt,selector:felt,calldata_len:felt,calldata": [
+            "0x1622b3df8a3feb7c3b9085cb77784cb5d95a031d3adf9ea5e7445d3094aeed3"
+          ]
+        }
+      },
+      "hash": "0x515c734510c00e1c4adb2a84c19458416c535aa128a6bcc15e32f85c9171c54",
+      "revision": "0",
+      "domain_hash": "0x6ac314b083f709b767428fb4dfc42b02ad5e96f5a774f6bfc73aba09a60dbd3",
+      "type_hash": "0x11ff76fe3f640fa6f3d60bbd94a3b9d47141a2c96f87fdcfbeb2af1d03f7050",
+      "fields": [
+        "0x11ff76fe3f640fa6f3d60bbd94a3b9d47141a2c96f87fdcfbeb2af1d03f7050",
+        "0x1",
+        "0x7",
+        "0x0",
+        "0x713fb300",
+        "0x1",
+        "0x29ff6fc820c84a4ccf2e18b1830f25f5754d9ac61398b194e8c3ab2e80d053e"
+      ],
+      "refused": true
+    },
+    {
+      "name": "a field name with a quote in it",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value\":\"felt\",\"more",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value\":\"felt\",\"more": "0x1"
+        }
+      },
+      "hash": "0x2127fd1978a3f4bf036c81e59bd1d1ac0ecad9ed1a99d694ba702de272ff87d",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0x32dc40f20fe6ae3a6408fbf20bac3417ccd6040a53ba6bdec128aa36830e024",
+      "fields": [
+        "0x32dc40f20fe6ae3a6408fbf20bac3417ccd6040a53ba6bdec128aa36830e024",
+        "0x1"
+      ],
+      "refused": true
+    },
+    {
+      "name": "a type name with a parenthesis in it",
+      "account": "0x4ab90a53ee28723221d88f555bd97c253fa95fe168a65e7dd03c28bc5e543e5",
+      "data": {
+        "types": {
+          "StarknetDomain": [
+            {
+              "name": "name",
+              "type": "shortstring"
+            },
+            {
+              "name": "version",
+              "type": "shortstring"
+            },
+            {
+              "name": "chainId",
+              "type": "shortstring"
+            },
+            {
+              "name": "revision",
+              "type": "shortstring"
+            }
+          ],
+          "Message": [
+            {
+              "name": "value",
+              "type": "Leaf\")(\"x"
+            }
+          ],
+          "Leaf\")(\"x": [
+            {
+              "name": "value",
+              "type": "felt"
+            }
+          ]
+        },
+        "primaryType": "Message",
+        "domain": {
+          "name": "Edge",
+          "version": "1",
+          "chainId": "SN_MAIN",
+          "revision": 1
+        },
+        "message": {
+          "value": {
+            "value": "0x5"
+          }
+        }
+      },
+      "hash": "0x75345a702890faefadc5bc2e4cb6d3248fb252e8d29bae151812ffab7bcc587",
+      "revision": "1",
+      "domain_hash": "0x7a05387812f1bad9fd63fdcc0b877656d3de6fad7eff53621ac51d293e5c47e",
+      "type_hash": "0xa3342acbc52c61230e70f02a3742dac6064eb12e1b815a65d70b126a88485e",
+      "fields": [
+        "0xa3342acbc52c61230e70f02a3742dac6064eb12e1b815a65d70b126a88485e",
+        "0x3e9c740a16e3929aab8e5593cdf25051fb90287970b0b61f9c27644ce897cf"
+      ],
+      "refused": true
+    }
+  ]
+}

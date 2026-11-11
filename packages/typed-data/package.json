@@ -1,0 +1,66 @@
+{
+  "name": "@outis-wallet/typed-data",
+  "version": "0.1.0",
+  "description": "SNIP-12 typed data hashing exactly as starknet.js reads it, refusing what it would read another way: the Rust crate outis-typed-data in WebAssembly",
+  "keywords": [
+    "starknet",
+    "snip-12",
+    "typed-data",
+    "wasm"
+  ],
+  "homepage": "https://github.com/outis-wallet/agent/tree/main/packages/typed-data",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/outis-wallet/agent.git",
+    "directory": "packages/typed-data"
+  },
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./reader": "./src/reader.ts",
+    "./node": "./node/index.ts",
+    "./node/load": "./node/load.ts"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "exports": {
+      ".": {
+        "types": "./dist/src/index.d.ts",
+        "import": "./dist/src/index.js"
+      },
+      "./reader": {
+        "types": "./dist/src/reader.d.ts",
+        "import": "./dist/src/reader.js"
+      },
+      "./node": {
+        "types": "./dist/node/index.d.ts",
+        "import": "./dist/node/index.js"
+      },
+      "./node/load": {
+        "types": "./dist/node/load.d.ts",
+        "import": "./dist/node/load.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build:wasm": "bash scripts/build-wasm.sh",
+    "build": "bash scripts/build-wasm.sh && rm -rf dist && tsc -p tsconfig.build.json && mkdir -p dist/pkg && cp pkg/typed_data.js pkg/typed_data.d.ts pkg/typed_data_bg.wasm pkg/typed_data_bg.wasm.d.ts dist/pkg/",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "starknet": "10.8.0",
+    "typescript": "7.0.2",
+    "vitest": "5.0.2"
+  }
+}

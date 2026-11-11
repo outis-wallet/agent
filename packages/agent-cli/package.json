@@ -1,0 +1,52 @@
+{
+  "name": "@outis-wallet/agent-cli",
+  "version": "0.1.1",
+  "description": "Outis agent wallet CLI: a bot spends from an account of its own, within limits the user sets in Outis",
+  "keywords": [
+    "outis",
+    "starknet",
+    "agent",
+    "wallet",
+    "cli",
+    "ai"
+  ],
+  "homepage": "https://github.com/outis-wallet/agent/tree/main/packages/agent-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/outis-wallet/agent.git",
+    "directory": "packages/agent-cli"
+  },
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "outis": "dist/outis.mjs"
+  },
+  "files": [
+    "dist",
+    "SKILL.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "dev": "tsx src/main.ts",
+    "build": "esbuild src/main.ts --bundle --platform=node --format=esm --target=node22 --outfile=dist/outis.mjs --banner:js=\"#!/usr/bin/env node\" --define:OUTIS_TYPED_DATA='\"./typed_data_bg.wasm\"' && cp ../typed-data/pkg/typed_data_bg.wasm dist/",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node dist/outis.mjs --help > /dev/null"
+  },
+  "devDependencies": {
+    "@outis-wallet/agent": "workspace:^",
+    "@outis-wallet/typed-data": "workspace:^",
+    "@types/node": "^22.0.0",
+    "esbuild": "0.28.2",
+    "starknet": "10.8.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}
