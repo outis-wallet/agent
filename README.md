@@ -15,6 +15,36 @@ accounts.
 
 Sepolia only for now. Agent accounts are new and unaudited: keep what you put in them small.
 
+## The agent never holds a private key to an account
+
+An agent account has two kinds of key, and the agent only ever has the weaker one.
+
+- **The owner key stays in the user's wallet.** The wallet derives it from the wallet's seed, the one
+  the recovery phrase restores, and never gives it to the agent or the CLI. Only the owner key can register or revoke a
+  session, change the account, or move funds without limits.
+- **The agent holds a session key.** The CLI makes it on the agent's machine. It can do nothing until
+  the user approves a session for it, and then only what that session allows.
+
+The account contract itself does the checking, on-chain: every transaction signed with a session key is
+checked before it runs, and every message signed with one is checked when its signature is verified.
+The wallet's screens and the CLI's checks aren't what stop it. A session allows only:
+
+- **Named contract entrypoints.** It can call only the contract methods the user approved, such as
+  `transfer` on STRK. Any other call is refused.
+- **Spending up to its limits.** It can spend each token only up to an amount per period (for example
+  10 STRK a day), and pay fees only up to its own fee limit.
+- **Named kinds of message.** It can sign only SNIP-12 messages of the types the user approved.
+- **Until it ends.** A session has an expiry, and the user can revoke it at any time. Changing the
+  account's owner ends every session too.
+
+The wallet also refuses to approve any session that would grant allowances (`approve`,
+`set_approval_for_all` and their variants), since an allowance would let value leave outside the
+limits.
+
+The worst a leaked or misbehaving session key can do is spend what its session allows, until it
+expires or the user stops it. It can never touch the user's own accounts: an agent account isn't
+linked to them, on-chain or anywhere else.
+
 ## How an agent gets a session
 
 1. The bot runs `outis connect`. The CLI makes a session key, kept on the bot's machine, and prints a

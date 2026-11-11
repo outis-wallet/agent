@@ -1,6 +1,6 @@
 {
   "name": "@outis-wallet/agent-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Outis agent wallet CLI: a bot spends from an account of its own, within limits the user sets in Outis",
   "keywords": [
     "outis",
